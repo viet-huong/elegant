@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+    url('fonts/MyriadPro-Regular.woff') format('woff'),
+    url('fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px calc(50vw - 592.5px);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+
+}
+
+header img {
+    height: 42px;
+    width: 190px;
+
+}
+
+b {
+    color: white;
+    font-size: 16px;
+    font-family: 'Myriad Pro';
+
+}
+#menubtn {
+    display: flex;
+}
+
+#menubtn b {
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#menubtn span {
+    height: 2px;
+    width: 18px;
+    display: block;
+    background-color: #fff;
+    margin: 3px 0 0 4px;
+    position: relative;
+}
+#menubtn span::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom:-5px;
+}
+
+#menubtn span::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+}
+
+.top {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.top img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 127px calc(50vw - 384.5px) 85px;
+}
+
+h1, h6 {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #747a7f;
+    font-family: 'Myriad Pro';
+    font-size: 44px;
+    margin-bottom: 88px;
+}
+
+h6 {
+    font-family: 'Myriad Pro';
+    font-size: 13px;
+    color: #d4af37;
+}
+
+
+.box {
+    height: 300px;
+    width: 300px;
+    padding: 32px;
+    background: #d3b000;
+    color: #ffffff;
+}
+
+.box p {
+    font-family: 'Myriad Pro';
+    font-size: 25px;
+}
+
+.long p {
+    color: #323d43;
+    font-size: 20px;
+    font-family: 'Myriad Pro';
+}
+
+.box::before {
+    content: '';
+    width: 31px;
+    height: 3px;
+    display: block;
+    background: #ffffff;
+    margin-bottom: 45px;
+}
+
+.box img {
+    width: 100%;
+    height: 300px;
+}
+
+.box.dark {
+    background: #333333;
+    margin-left: 7px;
+}
+
+.box.yellow {
+    margin-right: 7px;
+}
+
+.box.long {
+    background: #f9f9f9;
+    color: #323d43;
+    padding: 0;
+    width: calc(100% - 307px);
+
+}
+
+
+.box.long::before {
+    display: none;
+}
+
+.box:nth-of-type(3) {
+    padding: 44px;
+}
+
+
+button {
+    background-color: white;
+    border: black solid 1px;
+    width: 239px;
+    height: 56px;
+    margin-top: 77px;
+}
+button:hover{
+    color: #d3b000;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.copy {
+    margin-right: 148px;
+    font-size: 16px;
+    font-family: "Myriad Pro";
+    color: #505d68;
+
+}
+
+.contact {
+    font-size: 16px;
+    font-family: "Myriad Pro";
+    color: #505d68;
+}
+
+@media (max-width: 1093px) {
+    .copy {
+        margin-right: 50px;
+    }
+
+}
+@media (max-width: 705px) {
+    .content {
+        padding-top: 50px;
+    }
+    h1{
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+    }
+    .box.long {
+        width: calc(100% - 207px);
+    }
+    .box img {
+        width: 100%;
+        height: 200px;
+    }
+    .box:nth-of-type(3) {
+        padding: 10px;
+    }
+    .box a {
+        font-size: 15px;
+    }
+    footer{
+flex-flow: column;
+align-items: center;
+
+    }
+    .copy{
+        margin-bottom: 10px;
+    }
+
+}
+@media (max-width: 624px){
+    .content{
+        padding-bottom: 0;
+    }
+    .logo{
+        width: 80px;
+        height: 20px;
+    }
+    .box {
+        width: 100%;
+        flex-flow: column ;
+        margin: 10px;
+        height:250px;
+    }
+    .box.long{
+        width: 100%;
+    }
+    button{
+        margin: 20px;
+    }
+footer span {
+    font-size: 12px;
+}
+}
